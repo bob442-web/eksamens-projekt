@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwfwpwyf5jbeo"]
+
+[ext_resource type="Script" path="res://area_2d.gd" id="1_oyrtx"]
+[ext_resource type="PackedScene" uid="uid://bospu8jxby7s0" path="res://icon.tscn" id="2_yqh0m"]
+[ext_resource type="Script" path="res://icon.gd" id="3_r2coh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ir45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q37jy"]
+size = Vector2(1152, 142)
+
+[node name="Moon" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_oyrtx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+physics_material_override = SubResource("PhysicsMaterial_5ir45")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(576, 648)
+shape = SubResource("RectangleShape2D_q37jy")
+
+[node name="Icon" parent="." instance=ExtResource("2_yqh0m")]
+position = Vector2(573.25, 644.25)
+scale = Vector2(9.00391, 1.03516)
+script = ExtResource("3_r2coh")
