@@ -10,15 +10,13 @@ height = 132.0
 [node name="RigidBody2D" type="RigidBody2D"]
 gravity_scale = 0.5
 script = ExtResource("1_bjkrf")
-thrust_force = 400.0
 rotation_speed = 5.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3, 2.99995)
+position = Vector2(0, 5.96046e-08)
 rotation = -0.71733
 scale = Vector2(0.356142, 0.384481)
 texture = ExtResource("1_vrv4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_1j6rc")
