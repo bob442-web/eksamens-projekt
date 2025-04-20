@@ -29,7 +29,7 @@ def calculate_debt_free_time_with_interest(loan_amount, monthly_repayment, inter
 # Example usage
 n = int(input("Enter the loan amount (kr): "))
 x = int(input("Enter the monthly repayment amount (kr): "))
-r = float(input("Enter the monthly interest rate for a whole year that means you have to /12 (as a decimal, e.g., 0.01 for 1%): "))
+r = float(input("Enter the annual interest rate for a whole year  / bye 12 (as a decimal, e.g., 0.01 for 1%): "))
 
 months_needed = calculate_debt_free_time_with_interest(n, x, r)
 print(f"You will be debt-free in {months_needed/12} year.")
