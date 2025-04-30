@@ -11,7 +11,7 @@ def start():
 
         # Kald funktionen fra calculateDebtFreeTime.py
         months = calculate_debt_free_time_with_interest(loan_amount, monthly_payment, interest_rate)
-        print(f"\nDu vil være gældfri om {months} måneder.\n")
+        print(f"\nDu vil være gældfri om {months/12} år.\n")
     except ValueError as e:
         print(f"Fejl: {e}")
     except Exception as e:
