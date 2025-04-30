@@ -24,12 +24,3 @@ def calculate_debt_free_time_with_interest(loan_amount, monthly_repayment, inter
             loan_amount = 0
 
     return months
-
-
-# Example usage
-n = int(input("Enter the loan amount (kr): "))
-x = int(input("Enter the monthly repayment amount (kr): "))
-r = float(input("Enter the annual interest rate for a whole year  / bye 12 (as a decimal, e.g., 0.0025 for 3%): "))
-
-months_needed = calculate_debt_free_time_with_interest(n, x, r)
-print(f"You will be debt-free in {months_needed/12} year.")
