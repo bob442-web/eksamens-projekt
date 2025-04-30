@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bospu8jxby7s0"]
-
-[ext_resource type="Texture2D" uid="uid://dd8d1or7xwiqg" path="res://icon.svg" id="1_y687y"]
-
-[node name="Icon" type="Sprite2D"]
-position = Vector2(579.5, 665.5)
-scale = Vector2(9.02344, 0.835938)
-texture = ExtResource("1_y687y")
