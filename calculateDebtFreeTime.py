@@ -4,7 +4,7 @@ def calculate_debt_free_time_with_interest(loan_amount, monthly_repayment, inter
 
     :param loan_amount: The initial loan amount (in kr).
     :param monthly_repayment: The amount repaid each month (in kr).
-    :param interest_rate: The monthly interest rate (as a decimal, e.g., 0.01 for 1%).
+    :param interest_rate: The annual interest rate (as a decimal, e.g., 0.03 for 3%).
     :return: The number of months needed to become debt-free.
     """
     if monthly_repayment <= 0:
@@ -14,9 +14,12 @@ def calculate_debt_free_time_with_interest(loan_amount, monthly_repayment, inter
     if interest_rate < 0:
         raise ValueError("Interest rate cannot be negative.")
 
+   # Convert annual interest rate to monthly interest rate
+    monthly_interest_rate = interest_rate / 12
+
     months = 0
     while loan_amount > 0:
-        loan_amount += loan_amount * interest_rate  # Add interest
+        loan_amount += loan_amount * monthly_interest_rate  # Add monthly interest
         loan_amount -= monthly_repayment  # Subtract repayment
         months += 1
 
