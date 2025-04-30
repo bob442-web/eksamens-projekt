@@ -4,13 +4,13 @@ def start():
     """Funktion til at starte beregningen."""
     print("\n--- Start Beregning ---")
     try:
-        loan_amount = float(input("Indtast lånebeløb (kr): "))
+        loan_amount = int(input("Indtast lånebeløb (kr): "))
         interest_rate = float(input("Indtast rente (%): ")) / 100  # Konverter procent til decimal
-        monthly_payment = float(input("Indtast månedlig betaling (kr): "))
+        monthly_payment = int(input("Indtast månedlig betaling (kr): "))
 
         # Kald funktionen fra calculateDebtFreeTime.py
         months = calculate_debt_free_time_with_interest(loan_amount, monthly_payment, interest_rate)
-        print(f"\nDu vil være gældfri om {months} måneder.\n")
+        print(f"\nDu vil være gældfri om {months /12} år.\n")
     except ValueError as e:
         print(f"Fejl: {e}")
     except Exception as e:
